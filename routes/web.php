@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KontakController;
 
+Route::get('/kontak', [KontakController::class, 'index']); 
+Route::post('/kontak', [KontakController::class, 'store']); 
 
 Route::get('/', function () {
     return view('home');
